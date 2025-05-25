@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebRTC</title>
+</head>
+<body>
+    <h2>WebRTC Transfer</h2>
+    <input type="file" id="file"><br/><br/>
+    <textarea id="text" cols="60" rows="10"></textarea><br/><br/>
+    <button id="getoffer">Sender: Get Offer</button> <button id="setans">Sender: Set Answer</button> <button id="getans">Receiver: Get Answer</button><br/><br/>
+    <button id="send" disabled>Send File</button>
+    <progress id="progress" max="100" value="0" style="width: 100%"></progress>
+
+    <h5>Progress: <span id="ptext">0</span>%</h5>
+    
+    <script src="index.js"></script>
+</body>
+</html>
