@@ -72,7 +72,7 @@ sendbtn.onclick = () => {
 offerbtn.onclick = async () => {
     console.log('clicked get offer')
     text.value = ''
-    localConnection = new RTCPeerConnection({ iceServers })
+    localConnection = new RTCPeerConnection()
     dataChannel = localConnection.createDataChannel('file')
     dataChannel.binaryType = 'arraybuffer'
     dataChannel.bufferedAmountLowThreshold = THRESHOLD
@@ -96,7 +96,7 @@ offerbtn.onclick = async () => {
 
 ansbtn.onclick = async () => {
     console.log('clicked get ans')
-    remoteConnection = new RTCPeerConnection({ iceServers })
+    remoteConnection = new RTCPeerConnection()
     remoteConnection.ondatachannel = e => {
         const receiveChannel = e.channel
         
